@@ -1,0 +1,6 @@
+framework module Pods_Ferdinand {
+  umbrella header "Pods-Ferdinand-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Oswald-Regular.ttf">
+            <string>Oswald-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CircleView" customModule="Ferdinand" customModuleProvider="target">
+            <connections>
+                <outlet property="imgCheck" destination="SlY-mF-hHS" id="U7G-A7-nvk"/>
+                <outlet property="lblTitle" destination="xOx-lz-sFl" id="WgL-tv-ver"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOx-lz-sFl">
+                    <rect key="frame" x="80.5" y="81" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="11"/>
+                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PnO-mi-oLn">
+                    <rect key="frame" x="0.0" y="0.0" width="160" height="81"/>
+                    <subviews>
+                        <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="SlY-mF-hHS">
+                            <rect key="frame" x="67.5" y="27.5" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="SlY-mF-hHS" secondAttribute="height" multiplier="1:1" id="PHI-Ft-3EQ"/>
+                                <constraint firstAttribute="width" constant="24" id="dAF-jS-FAY"/>
+                                <constraint firstAttribute="height" constant="24" id="wV6-eT-85O"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="PHI-Ft-3EQ"/>
+                                    <exclude reference="dAF-jS-FAY"/>
+                                    <exclude reference="wV6-eT-85O"/>
+                                </mask>
+                            </variation>
+                            <variation key="widthClass=compact">
+                                <mask key="constraints">
+                                    <include reference="PHI-Ft-3EQ"/>
+                                    <include reference="dAF-jS-FAY"/>
+                                    <include reference="wV6-eT-85O"/>
+                                </mask>
+                            </variation>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="SlY-mF-hHS" firstAttribute="centerX" secondItem="PnO-mi-oLn" secondAttribute="centerX" id="OlO-d0-SC5"/>
+                        <constraint firstItem="SlY-mF-hHS" firstAttribute="centerY" secondItem="PnO-mi-oLn" secondAttribute="centerY" id="PVU-DV-Fjh"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="XYC-8s-Xsc" firstAttribute="trailing" secondItem="PnO-mi-oLn" secondAttribute="trailing" id="4yN-nK-6Vt"/>
+                <constraint firstItem="PnO-mi-oLn" firstAttribute="top" secondItem="XYC-8s-Xsc" secondAttribute="top" id="8Fd-YI-vRN"/>
+                <constraint firstItem="xOx-lz-sFl" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="CjE-Gr-kcw"/>
+                <constraint firstItem="xOx-lz-sFl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gRe-VX-3zS"/>
+                <constraint firstItem="PnO-mi-oLn" firstAttribute="leading" secondItem="XYC-8s-Xsc" secondAttribute="leading" id="gtP-Ax-ne8"/>
+                <constraint firstItem="xOx-lz-sFl" firstAttribute="top" secondItem="PnO-mi-oLn" secondAttribute="bottom" id="oiF-Lj-6gp"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="XYC-8s-Xsc"/>
+            <point key="canvasLocation" x="-158.5" y="-190"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Checkmark" width="75" height="75"/>
+    </resources>
+</document>

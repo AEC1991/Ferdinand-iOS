@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="16G29" minimumToolsVersion="Xcode 7.0" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="CartModel" representedClassName="CartModel" syncable="YES">
+        <attribute name="finish" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="modifiedTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="quantity" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="size" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="colorSet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ColorSet" syncable="YES"/>
+    </entity>
+    <entity name="Color" representedClassName="Color" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="percent" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="colorSet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ColorSet" inverseName="colors" inverseEntity="ColorSet" syncable="YES"/>
+    </entity>
+    <entity name="ColorSet" representedClassName="ColorSet" syncable="YES">
+        <attribute name="favourite" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="modifiedTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="colors" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Color" inverseName="colorSet" inverseEntity="Color" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Color" positionX="-54" positionY="0" width="128" height="90"/>
+        <element name="ColorSet" positionX="-297" positionY="72" width="128" height="120"/>
+        <element name="CartModel" positionX="342" positionY="54" width="128" height="133"/>
+    </elements>
+</model>
